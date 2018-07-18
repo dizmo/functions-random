@@ -40,5 +40,5 @@
     "test": "node ./cli/run-test.js"
   },
   "types": "dist/index.d.ts",
-  "version": "1.0.7"
+  "version": "1.0.8"
 }
