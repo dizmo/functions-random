@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/dizmo/dizmo-functions-random.svg?branch=master)](https://travis-ci.org/dizmo/dizmo-functions-random)
 [![Coverage Status](https://coveralls.io/repos/github/dizmo/dizmo-functions-random/badge.svg?branch=master)](https://coveralls.io/github/dizmo/dizmo-functions-random?branch=master)
 
-# @dizmo/random
+# @dizmo/dizmo-functions-random
 Attaches to the `String` type a `random` function which returns a random string for the provided length and range, where the length needs to be in `[0..8]` and the range in `[2..36]`. By default the length is `0`, and hence any empty string is the result.
 
 **NOTE**: The implementation of this functions is *not* cryptographically secure, and hence it should *only* be used in non-security related use cases! Internally it is based on the `Math.random` function.
@@ -9,11 +9,11 @@ Attaches to the `String` type a `random` function which returns a random string 
 ## Usage
 ### Install
 ```sh
-npm install @dizmo/random --save
+npm install @dizmo/dizmo-functions-random --save
 ```
 ### Require
 ```javascript
-require('@dizmo/random');
+require('@dizmo/dizmo-functions-random');
 ```
 ### Examples
 ```javascript
