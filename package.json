@@ -27,7 +27,7 @@
   ],
   "license": "ISC",
   "main": "dist/index.js",
-  "name": "@dizmo/dizmo-functions-random",
+  "name": "@dizmo/functions-random",
   "repository": {
     "type": "git",
     "url": ""
