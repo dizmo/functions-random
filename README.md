@@ -1,3 +1,4 @@
+[![NPM version](https://badge.fury.io/js/%40dizmo%2Ffunctions-random.svg)](https://npmjs.org/package/@dizmo/functions-random)
 [![Build Status](https://travis-ci.org/dizmo/functions-random.svg?branch=master)](https://travis-ci.org/dizmo/functions-random)
 [![Coverage Status](https://coveralls.io/repos/github/dizmo/functions-random/badge.svg?branch=master)](https://coveralls.io/github/dizmo/functions-random?branch=master)
 
