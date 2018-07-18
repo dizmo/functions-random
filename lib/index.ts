@@ -1,21 +1,39 @@
-/**
- * Returns provided argument(s) as is without any modification.
- *
- * The identify function is a no-operation and does not modify the provided list
- * of arguments. If no or a single argument is provided then nothing or only the
- * same single argument is returned.
- *
- * @param args list of anything
- * @returns provided argument(s)
- */
-export function id(...args: any[]): any | any[] {
-    if (args.length === 0) {
-        return undefined;
-    }
-    if (args.length === 1) {
-        return args[0];
-    }
-    return args;
+/* tslint:disable:interface-name */
+
+interface StringConstructor {
+    random(length: number, range: number): string;
 }
 
-export default id;
+/**
+ * Attaches to the `String` type a `random` function which returns a random
+ * string for the provided length and range.
+ *
+ * @param length of returned string in [0..8]
+ * @param range of characters in [2..36]
+ *
+ * @returns a random string
+ */
+String.random = (length: number = 0, range: number = 36): string => {
+    length = Math.floor(length);
+    if (length < 0) {
+        throw new Error("length < 0");
+    }
+    if (length > 8) {
+        throw new Error("length > 8");
+    }
+
+    range = Math.floor(range);
+    if (range < 2) {
+        throw new Error("range < 2");
+    }
+    if (range > 36) {
+        throw new Error("range > 36");
+    }
+
+    const pow = Math.pow(range, length);
+    const mul = range * pow;
+
+    return (length > 0)
+        ? Math.floor(mul - pow * Math.random()).toString(range).slice(1)
+        : "";
+};

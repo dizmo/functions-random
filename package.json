@@ -1,7 +1,7 @@
 {
   "author": {
     "name": "Hasan Karahan",
-    "email": "hasan.karahan@blackhan.com",
+    "email": "hkarahan@dizmo.com",
     "url": "https://github.com/hsk81"
   },
   "description": "random strings",
@@ -25,7 +25,7 @@
   ],
   "license": "ISC",
   "main": "dist/index.js",
-  "name": "@hsk81/random",
+  "name": "@dizmo/random",
   "repository": {
     "type": "git",
     "url": ""

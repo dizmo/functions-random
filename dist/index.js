@@ -1,29 +1,35 @@
 "use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
+/* tslint:disable:interface-name */
 /**
- * Returns provided argument(s) as is without any modification.
+ * Attaches to the `String` type a `random` function which returns a random
+ * string for the provided length and range.
  *
- * The identify function is a no-operation and does not modify the provided list
- * of arguments. If no or a single argument is provided then nothing or only the
- * same single argument is returned.
+ * @param length of returned string in [0..8]
+ * @param range of characters in [2..36]
  *
- * @param args list of anything
- * @returns provided argument(s)
+ * @returns a random string
  */
-function id() {
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-        args[_key] = arguments[_key];
-    }
 
-    if (args.length === 0) {
-        return undefined;
+String.random = function () {
+    var length = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+    var range = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 36;
+
+    length = Math.floor(length);
+    if (length < 0) {
+        throw new Error("length < 0");
     }
-    if (args.length === 1) {
-        return args[0];
+    if (length > 8) {
+        throw new Error("length > 8");
     }
-    return args;
-}
-exports.id = id;
-exports.default = id;
+    range = Math.floor(range);
+    if (range < 2) {
+        throw new Error("range < 2");
+    }
+    if (range > 36) {
+        throw new Error("range > 36");
+    }
+    var pow = Math.pow(range, length);
+    var mul = range * pow;
+    return length > 0 ? Math.floor(mul - pow * Math.random()).toString(range).slice(1) : "";
+};
 //# sourceMappingURL=index.js.map
