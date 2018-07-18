@@ -1,0 +1,42 @@
+{
+  "author": {
+    "name": "Hasan Karahan",
+    "email": "hasan.karahan@blackhan.com",
+    "url": "https://github.com/hsk81"
+  },
+  "description": "random strings",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.2",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "tslint": "^5.10.0",
+    "typescript": "^2.9.2"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "library",
+    "module"
+  ],
+  "license": "ISC",
+  "main": "dist/index.js",
+  "name": "@hsk81/random",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "build": "node ./cli/run-build.js",
+    "cover": "node ./cli/run-cover.js",
+    "lint": "node ./cli/run-lint.js",
+    "lint:fix": "node ./cli/run-lint-fix.js",
+    "test": "node ./cli/run-test.js"
+  },
+  "types": "dist/index.d.ts",
+  "version": "1.0.0"
+}
