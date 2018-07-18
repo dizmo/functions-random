@@ -21,7 +21,9 @@
   ],
   "keywords": [
     "library",
-    "module"
+    "module",
+    "random",
+    "string"
   ],
   "license": "ISC",
   "main": "dist/index.js",
