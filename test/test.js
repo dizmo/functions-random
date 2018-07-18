@@ -25,9 +25,11 @@ describe('index.random', () => {
 describe('index.random', () => {
     it('should return a string', () => {
         expect(index.random()).to.be.a('string');
+        expect(String.random()).to.be.a('string');
     });
     it('should return a default empty string', () => {
         expect(index.random()).to.equal('');
+        expect(String.random()).to.equal('');
     });
 });
 
