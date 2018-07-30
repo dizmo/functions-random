@@ -30,7 +30,7 @@
   "name": "@dizmo/functions-random",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/dizmo/functions-random.git"
   },
   "scripts": {
     "build": "node ./cli/run-build.js",
