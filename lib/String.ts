@@ -1,7 +1,7 @@
 /* tslint:disable:interface-name */
 
 interface StringConstructor {
-    random(length: number, range: number): string;
+    random(length?: number, range?: number): string;
 }
 
 /**

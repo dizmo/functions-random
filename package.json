@@ -7,6 +7,8 @@
   "description": "random strings",
   "dependencies": {},
   "devDependencies": {
+    "@types/chai": "^4.1.4",
+    "@types/mocha": "^5.2.5",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "chai": "^4.1.2",
@@ -14,10 +16,10 @@
     "istanbul": "^0.4.5",
     "mocha": "^5.2.0",
     "tslint": "^5.11.0",
-    "typescript": "^2.9.2"
+    "typescript": "^3.0.1"
   },
   "files": [
-    "dist"
+    "dist/lib"
   ],
   "keywords": [
     "library",
@@ -26,7 +28,7 @@
     "string"
   ],
   "license": "ISC",
-  "main": "dist/index.js",
+  "main": "dist/lib/index.js",
   "name": "@dizmo/functions-random",
   "repository": {
     "type": "git",
@@ -34,10 +36,10 @@
   },
   "scripts": {
     "build": "node ./cli/run-build.js",
-    "cover": "node ./cli/run-cover.js",
+    "cover": "node ./cli/run-test.js --cover",
     "lint": "node ./cli/run-lint.js",
     "test": "node ./cli/run-test.js"
   },
-  "types": "dist/index.d.ts",
+  "types": "dist/lib/index.d.ts",
   "version": "1.0.16"
 }
