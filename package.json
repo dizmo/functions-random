@@ -4,8 +4,8 @@
     "email": "hkarahan@dizmo.com",
     "url": "https://github.com/hsk81"
   },
-  "description": "random strings",
   "dependencies": {},
+  "description": "random strings",
   "devDependencies": {
     "@types/chai": "^4.1.4",
     "@types/mocha": "^5.2.5",
@@ -22,10 +22,10 @@
     "dist/lib"
   ],
   "keywords": [
+    "dizmo",
+    "functions",
     "library",
-    "module",
-    "random",
-    "string"
+    "random"
   ],
   "license": "ISC",
   "main": "dist/lib/index.js",
