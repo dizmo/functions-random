@@ -2,8 +2,8 @@
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var chai_1 = require("chai");
-require("mocha");
 var index_1 = require("../lib/index");
+require("mocha");
 describe("String.random", function () {
     it("should exist", function () {
         chai_1.expect(String.random).to.not.be.an("undefined");

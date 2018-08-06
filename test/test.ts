@@ -1,6 +1,7 @@
 import { expect } from "chai";
-import "mocha";
 import { random } from "../lib/index";
+
+import "mocha";
 
 describe("String.random", () => {
     it("should exist", () => {
