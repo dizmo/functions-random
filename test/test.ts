@@ -21,7 +21,7 @@ describe("String.random", () => {
     });
 });
 
-describe("index.random", () => {
+describe("random", () => {
     it("should exist", () => {
         expect(random).to.not.be.an("undefined");
     });
@@ -30,7 +30,7 @@ describe("index.random", () => {
     });
 });
 
-describe("index.random", () => {
+describe("random", () => {
     it("should return a string", () => {
         expect(random()).to.be.a("string");
     });
@@ -39,7 +39,7 @@ describe("index.random", () => {
     });
 });
 
-describe("index.random", () => {
+describe("random", () => {
     it("should err on a-1-length string", () => {
         expect(() => random(-1)).to.throw("length < 0");
     });
@@ -66,7 +66,7 @@ describe("index.random", () => {
     });
 });
 
-describe("index.random", () => {
+describe("random", () => {
     it("should err on a 0-range string", () => {
         expect(() => random(8, 0)).to.throw("range < 2");
     });
@@ -99,7 +99,7 @@ describe("index.random", () => {
     });
 });
 
-describe("index.random", () => {
+describe("random", () => {
     it("should return a random string of 1 bit", () => {
         expect(random(1, 2)).to.be.a("string");
         expect(random(1, 2)).to.be.oneOf(["0", "1"]);

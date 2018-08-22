@@ -20,7 +20,7 @@ describe("String.random", function () {
         chai_1.expect(String.random()).to.equal("");
     });
 });
-describe("index.random", function () {
+describe("random", function () {
     it("should exist", function () {
         chai_1.expect(index_1.random).to.not.be.an("undefined");
     });
@@ -28,7 +28,7 @@ describe("index.random", function () {
         chai_1.expect(index_1.random).to.be.a("function");
     });
 });
-describe("index.random", function () {
+describe("random", function () {
     it("should return a string", function () {
         chai_1.expect(index_1.random()).to.be.a("string");
     });
@@ -36,7 +36,7 @@ describe("index.random", function () {
         chai_1.expect(index_1.random()).to.equal("");
     });
 });
-describe("index.random", function () {
+describe("random", function () {
     it("should err on a-1-length string", function () {
         chai_1.expect(function () {
             return index_1.random(-1);
@@ -66,7 +66,7 @@ describe("index.random", function () {
         }).to.throw("length > 8");
     });
 });
-describe("index.random", function () {
+describe("random", function () {
     it("should err on a 0-range string", function () {
         chai_1.expect(function () {
             return index_1.random(8, 0);
@@ -104,7 +104,7 @@ describe("index.random", function () {
         }).to.throw("range > 36");
     });
 });
-describe("index.random", function () {
+describe("random", function () {
     it("should return a random string of 1 bit", function () {
         chai_1.expect(index_1.random(1, 2)).to.be.a("string");
         chai_1.expect(index_1.random(1, 2)).to.be.oneOf(["0", "1"]);
