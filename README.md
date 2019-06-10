@@ -19,13 +19,13 @@ npm install @dizmo/functions-random --save
 ### Require
 
 ```javascript
-let lib = require('@dizmo/functions-random');
+const { random } = require('@dizmo/functions-random');
 ```
 
 ### Examples
 
 ```javascript
-String.random(8);
+random(8);
 ```
 
 ```javascript
@@ -33,7 +33,7 @@ us7c55xs
 ```
 
 ```javascript
-String.random(8, 2);
+random(8, 2);
 ```
 
 ```javascript
