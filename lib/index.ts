@@ -8,8 +8,7 @@ import "./String";
  *
  * @returns a random string
  */
-export function random(length: number = 0, range: number = 36): string {
+export function random(length = 0, range = 36): string {
     return String.random(length, range);
 }
-
 export default random;

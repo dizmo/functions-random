@@ -1,5 +1,4 @@
-/* tslint:disable:interface-name */
-
+/* eslint @typescript-eslint/no-unused-vars: [off] */
 interface StringConstructor {
     random(length?: number, range?: number): string;
 }
@@ -13,7 +12,7 @@ interface StringConstructor {
  *
  * @returns a random string
  */
-String.random = (length: number = 0, range: number = 36): string => {
+String.random = (length = 0, range = 36): string => {
     length = Math.floor(length);
     if (length < 0) {
         throw new Error("length < 0");
@@ -21,7 +20,6 @@ String.random = (length: number = 0, range: number = 36): string => {
     if (length > 8) {
         throw new Error("length > 8");
     }
-
     range = Math.floor(range);
     if (range < 2) {
         throw new Error("range < 2");
@@ -29,10 +27,8 @@ String.random = (length: number = 0, range: number = 36): string => {
     if (range > 36) {
         throw new Error("range > 36");
     }
-
     const pow = Math.pow(range, length);
     const mul = range * pow;
-
     return (length > 0)
         ? Math.floor(mul - pow * Math.random()).toString(range).slice(1)
         : "";
