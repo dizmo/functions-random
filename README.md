@@ -4,9 +4,7 @@
 
 # @dizmo/functions-random
 
-Attaches to the `String` type a `random` function which returns a random string for the provided length and range, where the length needs to be in `[0..8]` and the range in `[2..36]`. By default the length is `0`, and hence any empty string is the result.
-
-**NOTE**: The implementation of this functions is *not* cryptographically secure, and hence it should *only* be used in non-security related use cases! Internally it is based on the `Math.random` function.
+Attaches to the `String` type a `random` function which returns a random string for the provided number of bytes and encoding with `ascii`, `base64`, `hex`, `latin1` and `ucs2` as possible values. By default the number of bytes is `16` and the default encoding is `hex`.
 
 ## Usage
 
@@ -25,19 +23,51 @@ const { random } = require('@dizmo/functions-random');
 ### Examples
 
 ```javascript
-random(8);
+random(16);
 ```
 
 ```javascript
-us7c55xs
+2fa6651ce3680dd13899156f9550ec61
 ```
 
 ```javascript
-random(8, 2);
+random(16, 'hex');
 ```
 
 ```javascript
-11001000
+d00e24ae8348004bca2f9c07ba6ae43b
+```
+
+```javascript
+random(16, 'ascii');
+```
+
+```javascript
+lZq\x01\x07j\x17:OnlG9u[\x13
+```
+
+```javascript
+random(16, 'base64');
+```
+
+```javascript
+QbqxfgF3JBiCktUQl+p9lQ==
+```
+
+```javascript
+random(16, 'latin1');
+```
+
+```javascript
+Ø¼\x8D\x9F*>\nØ\x83BÃÑë{\x15Ð
+```
+
+```javascript
+random(16, 'ucs2');
+```
+
+```javascript
+☔戠䰍⧗灺밄䯗晡
 ```
 
 ## Development

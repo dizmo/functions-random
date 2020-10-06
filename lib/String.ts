@@ -1,35 +1,23 @@
+/* eslint @typescript-eslint/no-var-requires: [off] */
+const randomBytes = require('randombytes');
+
 /* eslint @typescript-eslint/no-unused-vars: [off] */
 interface StringConstructor {
-    random(length?: number, range?: number): string;
+    random(bytes?: number, encoding?: string): string;
 }
 
 /**
  * Attaches to the `String` type a `random` function which returns a random
- * string for the provided length and range.
+ * string for the provided number of bytes and encoding.
  *
- * @param length of returned string in [0..8]
- * @param range of characters in [2..36]
+ * @param bytes
+ *  number of random bytes with `16` as default
+ * @param encoding
+ *  encoding of random string with `hex` as default. Possible encodings are
+ *  `ascii`, `base64`, `hex`, `latin1`, and `ucs2`.
  *
  * @returns a random string
  */
-String.random = (length = 0, range = 36): string => {
-    length = Math.floor(length);
-    if (length < 0) {
-        throw new Error("length < 0");
-    }
-    if (length > 8) {
-        throw new Error("length > 8");
-    }
-    range = Math.floor(range);
-    if (range < 2) {
-        throw new Error("range < 2");
-    }
-    if (range > 36) {
-        throw new Error("range > 36");
-    }
-    const pow = Math.pow(range, length);
-    const mul = range * pow;
-    return (length > 0)
-        ? Math.floor(mul - pow * Math.random()).toString(range).slice(1)
-        : "";
+String.random = (bytes = 16, encoding = 'hex'): string => {
+    return randomBytes(bytes).toString(encoding);
 };
